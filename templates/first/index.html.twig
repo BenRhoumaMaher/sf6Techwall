@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{ firstname }}
-			{{ name }}</title>
-	</head>
-	<body>
-		<div>
-			<h1>With Love From
-				{{ firstname }}
-				{{ name }}</h1>
-			<p>Bonjour Symfony</p>
-		</div>
-	</body>
-</html>
+{% extends 'template.html.twig' %}
+{% block title %}
+	{{ firstname }}
+	{{ name }}
+{% endblock %}
+{% block body %}
+	<h1>With Love From
+		{{ firstname }}
+		{{ name }}</h1>
+	<p>Bonjour Symfony</p>
+	Mon url absolu est :
+	{{ url('first') }}
+{% endblock %}
